@@ -75,7 +75,7 @@ userRoute.post("/login", async (req, res) => {
       if (!userCheck.isApproved && userCheck.role === 'user') {
         // console.log("info false")
         return res.status(200).send({
-          msg: "user not approved to login",
+          msg: "User not approved to login",
         });
       }
       bcrypt.compare(password, userCheck.password, (err, result) => {
